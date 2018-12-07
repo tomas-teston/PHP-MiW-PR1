@@ -9,11 +9,8 @@
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     http://www.etsisi.upm.es ETS de Ingeniería de Sistemas Informáticos
  */
-
 namespace MiW\Results\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * User
  *
@@ -47,7 +44,6 @@ class User implements \JsonSerializable
      * @SuppressWarnings(PHPMD.ShortVariable)
      */
     private $id;
-
     /**
      * Username
      *
@@ -62,7 +58,6 @@ class User implements \JsonSerializable
      *     )
      */
     private $username;
-
     /**
      * Email
      *
@@ -77,7 +72,6 @@ class User implements \JsonSerializable
      *     )
      */
     private $email;
-
     /**
      * Enabled
      *
@@ -90,7 +84,6 @@ class User implements \JsonSerializable
      *     )
      */
     private $enabled;
-
     /**
      * IsAdmin
      *
@@ -104,7 +97,6 @@ class User implements \JsonSerializable
      *     )
      */
     private $isAdmin;
-
     /**
      * Password
      *
@@ -118,7 +110,6 @@ class User implements \JsonSerializable
      *     )
      */
     private $password;
-
     /**
      * User constructor.
      *
@@ -132,7 +123,7 @@ class User implements \JsonSerializable
         string $username = '',
         string $email = '',
         string $password = '',
-        bool   $enabled = true,
+        bool   $enabled = false,
         bool   $isAdmin = false
     ) {
         $this->id       = 0;
@@ -142,7 +133,84 @@ class User implements \JsonSerializable
         $this->enabled  = $enabled;
         $this->isAdmin  = $isAdmin;
     }
-
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+    /**
+     * @return string
+     */
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+    /**
+     * @param string $username
+     * @return User
+     */
+    public function setUsername(string $username): User
+    {
+        $this->username = $username;
+        return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+    /**
+     * @param string $email
+     * @return User
+     */
+    public function setEmail(string $email): User
+    {
+        $this->email = $email;
+        return $this;
+    }
+    /**
+     * @return bool
+     */
+    public function isEnabled(): bool
+    {
+        return $this->enabled;
+    }
+    /**
+     * @param bool $enabled
+     * @return User
+     */
+    public function setEnabled(bool $enabled): User
+    {
+        $this->enabled = $enabled;
+        return $this;
+    }
+    /**
+     * @return boolean
+     */
+    public function getEnabled(): string
+    {
+        return $this->enabled;
+    }
+    /**
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return $this->isAdmin;
+    }
+    /**
+     * @param bool $isAdmin
+     * @return User
+     */
+    public function setIsAdmin(bool $isAdmin): User
+    {
+        $this->isAdmin = $isAdmin;
+        return $this;
+    }
     /**
      * Set password
      *
@@ -155,7 +223,6 @@ class User implements \JsonSerializable
         $this->password = password_hash($password, PASSWORD_DEFAULT);
         return $this;
     }
-
     /**
      * Verifies that the given hash matches the user password.
      *
@@ -167,7 +234,6 @@ class User implements \JsonSerializable
     {
         return password_verify($password, $this->password);
     }
-
     /**
      * Representation of User as string
      *
@@ -177,7 +243,6 @@ class User implements \JsonSerializable
     {
         return $this->username;
     }
-
     /**
      * Specify data which should be serialized to JSON
      *
