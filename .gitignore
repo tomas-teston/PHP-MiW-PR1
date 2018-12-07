@@ -3,6 +3,7 @@
 /composer.lock
 /.env
 /phpunit.xml
+/.idea
 
 # User-specific stuff:
 .idea/**/workspace.xml
