@@ -1,7 +1,7 @@
 <?php
 /**
  * PHP version 7.2
- * src\create_user_one.php
+ * src\create_one_user.php
  *
  * @category Scripts
  * @author   Tomás Muñoz Testón <tomini18@hotmail.com>
