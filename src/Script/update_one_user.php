@@ -34,9 +34,12 @@ $userId = (int) $argv[1];
 echo "ID User: " . $userId . PHP_EOL;
 
 $userRepository = $entityManager->getRepository(User::class);
+
+/** @var User $user */
 $user = $entityManager
     ->getRepository(User::class)
     ->findOneBy(['id' => $userId]);
+
 
 if (null === $user) {
     echo PHP_EOL."Usuario $userId no encontrado".PHP_EOL.PHP_EOL;
