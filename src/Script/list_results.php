@@ -17,7 +17,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 // Carga las variables de entorno
 $dotenv = new \Dotenv\Dotenv(
     __DIR__ . '/..',
-    Utils::getEnvFileName(__DIR__ . '/..')
+    Utils::getEnvFileName(__DIR__ . '/../..')
 );
 $dotenv->load();
 

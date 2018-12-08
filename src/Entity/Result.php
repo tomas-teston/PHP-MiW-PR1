@@ -112,6 +112,56 @@ class Result implements \JsonSerializable
     }
 
     /**
+     * @return int
+     */
+    public function getResult(): int
+    {
+        return $this->result;
+    }
+    /**
+     * @param int $result
+     * @return result
+     */
+    public function setResult(int $result): Result
+    {
+        $this->result = $result;
+        return $this;
+    }
+    /**
+     * @return user
+     */
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+    /**
+     * @param User $user
+     * @return result
+     */
+    public function setUser(User $user): Result
+    {
+        $this->user = $user;
+        return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getTime(): string
+    {
+        return $this->time->format('Y-m-d H:i:s');
+    }
+    /**
+     * @param \DateTime $time
+     * @return Result
+     */
+    public function setTime(\DateTime $time): Result
+    {
+        $this->time = $time;
+        return $this;
+    }
+
+
+    /**
      * Implements __toString()
      *
      * @return string
