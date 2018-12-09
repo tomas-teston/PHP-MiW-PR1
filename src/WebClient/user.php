@@ -22,7 +22,7 @@
             <div class="container">
                 <div id="panel_login">
                     <form id="modificar_usuario" action="./server/users/update_one_user.php" method="POST" class="tab-pane fade in active">
-                        <h2 class="header">Registrar usuario:</h2>
+                        <?php ($op === 'readonly') ? print '<h2 class="header">Mostrar usuario:</h2>' : print '<h2 class="header">Modificar usuario:</h2>' ?>
                         <div class="form-horizontal">
                             <div class="form-group">
                                 <input name="id" type="hidden" value="<?php echo $user->getId() ?>">

@@ -19,8 +19,8 @@
     <h2 class="header">Bienvenido</h2>
     <div class="row">
         <div class="jumbotron img-background">
-            <h1 class="text-justify">Padel U.P.M.</h1>
-            <p class="text-justify">El club universitario más dinámico del mundo</p>
+            <h1 class="text-justify">Herramienta de administración</h1>
+            <p class="text-justify">de usuarios y resultados</p>
         </div>
     </div>
 </div>

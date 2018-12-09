@@ -144,8 +144,9 @@ hr {
 }
 
 .img-background {
-	background: url("../img/red.jpg") no-repeat;
-	background-size: cover;
+	background: url("../img/infografia_index.png") no-repeat;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
 	color: white !important;
 	border-radius: 2px !important;
 	-webkit-border-radius: 2px !important;

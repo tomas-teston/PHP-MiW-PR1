@@ -1,5 +1,5 @@
-<?php $page='users'; ?>
-<?php require './server/users/list_users.php' ?>
+<?php $page='results'; ?>
+<?php require './server/results/list_results.php' ?>
 <!DOCTYPE html>
 <html>
 <?php require './core/head.php' ?>
@@ -30,26 +30,24 @@
                                     <tr>
                                         <th scope="row">Id</th>
                                         <th scope="col">Username</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Habilitado</th>
-                                        <th scope="col">Administrador</th>
+                                        <th scope="col">Result</th>
+                                        <th scope="col">Date</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ($users as $user) {?>
+                                    <?php foreach ($results as $result) {?>
                                         <tr>
-                                            <th> <?php echo $user->getId() ?></th>
-                                            <th> <?php echo $user->getUsername() ?></th>
-                                            <th> <?php echo $user->getEmail() ?></th>
-                                            <th> <?php echo ($user->isEnabled()) ? 'Si' : 'No' ?></th>
-                                            <th> <?php echo ($user->isAdmin()) ? 'Si' : 'No' ?></th>
-                                            <th><a href="user.php<?php echo '?id='.$user->getId() ?>&op=read"><span class="glyphicon glyphicon-search"></span></a></th>
-                                            <th><a href="user.php<?php echo '?id='.$user->getId() ?>&op=update"><span class="glyphicon glyphicon-pencil"></span></a></th>
+                                            <th> <?php echo $result->getId() ?></th>
+                                            <th> <?php echo $result->getUser() ?></th>
+                                            <th> <?php echo $result->getResult() ?></th>
+                                            <th> <?php echo $result->getTime() ?></th>
+                                            <th><a href="result.php<?php echo '?id='.$result->getId() ?>&op=read"><span class="glyphicon glyphicon-search"></span></a></th>
+                                            <th><a href="result.php<?php echo '?id='.$result->getId() ?>&op=update"><span class="glyphicon glyphicon-pencil"></span></a></th>
                                             <th>
-                                                <a href="./server/users/delete_one_user.php<?php echo '?id='.$user->getId() ?>" onclick="return confirm('¿Deseas eliminar el usuario?');">
+                                                <a href="./server/results/delete_one_result.php<?php echo '?id='.$result->getId() ?>" onclick="return confirm('¿Deseas eliminar el resultado?');">
                                                     <span class="glyphicon glyphicon-trash"></span>
                                                 </a>
                                             </th>
@@ -59,7 +57,7 @@
                                 </table>
                             </div>
                         </div>
-                        <a href="./create_user.php" type="button" class="btn btn-primary"><span id="icon_regis" class="glyphicon glyphicon-user"></span>Crear nuevo usuario</a>
+                        <a href="./create_result.php" type="button" class="btn btn-primary"><span id="icon_regis" class="glyphicon glyphicon-user"></span>Crear nuevo resultado</a>
                     </div>
                 </div>
             </div>
