@@ -20,7 +20,6 @@ $dotenv = new \Dotenv\Dotenv(
 );
 $dotenv->load();
 
-$entityManager = Utils::getEntityManager();
 if ($argc < 2 || $argc > 3) {
     $fich = basename(__FILE__);
     echo <<< MARCA_FIN
@@ -32,6 +31,7 @@ MARCA_FIN;
 
 $userId = (int) $argv[1];
 
+$entityManager = Utils::getEntityManager();
 $userRepository = $entityManager->getRepository(User::class);
 $user = $entityManager
     ->getRepository(User::class)
