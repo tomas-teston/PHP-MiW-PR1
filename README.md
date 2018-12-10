@@ -1,4 +1,4 @@
-# Backend con tecnologías de libre distribución - Práctica 2
+# Backend con tecnologías de libre distribución - Práctica 1
 > En este proyecto se realiza una primera aproximación a la programación con PHP
 > #### [Máster en Ingeniería Web por la Universidad Politécnica de Madrid (miw-upm)](http://miw.etsisi.upm.es)
 > #### Asignatura: *PHP*
